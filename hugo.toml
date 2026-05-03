@@ -8,21 +8,24 @@ theme = 'congo'
     locale = 'es'
     label = 'Español'
     contentDir = 'content'
+    [languages.es.params]
+      description = 'Bitácora técnica de un ingeniero de software hacia la maestría en ciberseguridad (IPN/UNAM).'
+      disableAuthorWarnings = true
+      showSummary = true
+      showDate = true
+      showReadingTime = true
+      showEdit = false
+      [languages.es.params.author]
+        name = "Cesar Eduardo Ceron Martinez"
+        image = "https://github.com/CesarEduardoCeronM.png"
+        links = [
+          { github = "https://github.com/CesarEduardoCeronM" }
+        ]
 
 [params]
+  # Fallback params
   description = 'Bitácora técnica de un ingeniero de software hacia la maestría en ciberseguridad (IPN/UNAM).'
-  disableAuthorWarnings = true
-  showSummary = true
-  showDate = true
-  showReadingTime = true
-  showEdit = false
-
-  [params.author]
-    name = "Cesar Eduardo Ceron Martinez"
-    image = "https://github.com/CesarEduardoCeronM.png" # Tu foto de perfil de GitHub
-    links = [
-      { github = "https://github.com/CesarEduardoCeronM" }
-    ]
+  author = "Cesar Eduardo Ceron Martinez"
   
 [menu]
   [[menu.main]]
