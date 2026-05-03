@@ -2,53 +2,47 @@
 title: "Aureum: Simulador Financiero y Seguridad Perimetral"
 date: 2026-05-03
 draft: false
-summary: "Plataforma educativa de inversiones basada en microservicios con un gateway de seguridad centralizado."
-tags: ["Desarrollo", "Seguridad", "Microservicios", "Supabase", "JWT"]
+summary: "Plataforma educativa de inversiones basada en microservicios con un gateway centralizado en C# y despliegue en Railway."
+tags: ["Desarrollo", "C#", "Python", "Microservicios", "Railway", "Supabase"]
 ---
 
-**Aureum** es una plataforma educativa diseñada para enseñar inversiones mediante simulaciones prácticas en equipo. Como proyecto de arquitectura multicapa, su complejidad reside en la orquestación de múltiples microservicios y la gestión unificada de la identidad y la seguridad.
+**Aureum** es una plataforma educativa de alto rendimiento diseñada para la simulación de mercados financieros. Su arquitectura se centra en el aislamiento de entornos y la seguridad centralizada de los flujos de datos.
 
-## Mi Rol: Arquitecto de Seguridad y Gestión de Identidad
+## Arquitectura de Backend y Despliegue
 
-En este proyecto, fui responsable de diseñar y desarrollar el **núcleo de gestión de cuentas** y la **infraestructura de seguridad perimetral**.
+El sistema fue diseñado bajo una filosofía de **políglota en microservicios**, permitiendo que cada componente utilizara la herramienta más eficiente para su tarea:
 
-### 1. Gateway de Seguridad Centralizado
-Desarrollé el Gateway encargado de la seguridad perimetral, actuando como el único punto de entrada para todas las peticiones de los frontends (Web y Móvil).
-*   **Seguridad Perimetral:** Filtrado y validación de peticiones antes de llegar a los microservicios internos.
-*   **Orquestación:** El gateway actúa como balanceador y distribuidor de tareas entre los servicios del backend.
-*   **Autenticación JWT:** Implementación de tokens para sesiones seguras y persistentes.
+### 1. Gateway Perimetral (C# / .NET)
+Desarrollé el Gateway central usando **C#**, el cual actúa como el "escudo" y orquestador del sistema:
+*   **Seguridad Perimetral:** Validación rigurosa de cada petición entrante mediante JWT.
+*   **Routing Inteligente:** Distribución de carga y tareas hacia los microservicios internos.
+*   **Consolidación de Identidad:** Integración directa con Supabase para la validación de sesiones.
 
-### 2. Gestión de Identidad (IAM) con Supabase
-Implementé el ciclo completo de vida de las cuentas de usuario:
-*   **Operaciones CRUD:** Registro, autenticación, modificación y eliminación de perfiles.
-*   **RBAC (Role-Based Access Control):** Gestión avanzada de permisos y roles para asegurar que cada usuario acceda solo a los recursos permitidos.
-*   **Integración con Supabase:** Aprovechamiento de la infraestructura de Supabase para la persistencia segura de credenciales y perfiles.
+### 2. Microservicio de Usuarios (Python)
+Implementé el microservicio encargado de la gestión de identidad y perfiles utilizando **Python**:
+*   **Gestión de Cuentas:** Ciclo de vida completo (CRUD) de usuarios.
+*   **Lógica de Negocio:** Manejo de permisos y roles (RBAC) integrados con la base de datos.
+*   **Eficiencia:** Procesamiento rápido de metadatos de usuario y sincronización con Supabase.
+
+### 3. Infraestructura y Despliegue
+*   **Railway:** El backend completo fue desplegado en **Railway**, aprovechando su capacidad de escalado y gestión de variables de entorno seguras.
+*   **Supabase + JWT:** Uso de Supabase como proveedor de autenticación y base de datos relacional, garantizando la persistencia segura de la información financiera simulada.
 
 ---
 
-## Arquitectura Técnica
+## Interfaz Multiplataforma
+El backend de Aureum fue diseñado para ser agnóstico al frontend, alimentando simultáneamente dos interfaces distintas desarrolladas bajo **Arquitectura Hexagonal**:
 
-El sistema se diseñó bajo un patrón de **Arquitectura Hexagonal + Modular**, permitiendo que el backend sirviera de manera agnóstica a dos plataformas diferentes:
-
-### Stack Tecnológico
-*   **Backend:** Java / Node.js (Microservicios).
-*   **Base de Datos y Auth:** Supabase + JWT.
-*   **Frontend Web/Desktop:** React, TypeScript, Tailwind CSS.
-*   **Frontend Móvil:** React Native, Expo, NativeWind.
-
-### Organización del Proyecto
-El código se organiza siguiendo la separación de intereses (SoC):
-*   **Capa de Dominio:** Lógica pura de negocio (entidades y casos de uso).
-*   **Capa de Infraestructura:** Adaptadores para APIs externas y Supabase.
-*   **Capa de Aplicación:** Configuración global y navegación.
+1.  **Aureum Desktop/Web:** Desarrollado con React, TypeScript y Tailwind CSS.
+2.  **Aureum Mobile:** Desarrollado con React Native, Expo y NativeWind.
 
 ---
 
 ## Enfoque en Ciberseguridad
-Desde la perspectiva de la seguridad, Aureum sirvió como laboratorio para aplicar conceptos de **Defensa en Profundidad**:
-1.  **Validación en el Gateway:** Ninguna petición llega al microservicio sin ser validada.
-2.  **Tokens Efímeros:** Uso de JWT para reducir la superficie de exposición en caso de intercepción.
-3.  **Aislamiento de Entornos:** Cada equipo funciona como un mercado aislado, emulando la segmentación de redes.
+Este proyecto permitió la implementación de patrones de seguridad críticos:
+*   **Gateway como Punto Único de Falla Controlado:** Centralización de logs y auditoría en un solo punto de entrada.
+*   **Tokens JWT Efímeros:** Minimización de riesgos de secuestro de sesión.
+*   **Aislamiento de Mercados:** Segmentación lógica de los datos de cada equipo para evitar fugas de información transaccional.
 
 ---
 *Nota: Este proyecto es de código privado y propiedad intelectual protegida.*
