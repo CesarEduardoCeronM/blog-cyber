@@ -11,12 +11,18 @@ theme = 'congo'
 
 [params]
   description = 'Bitácora técnica de un ingeniero de software hacia la maestría en ciberseguridad (IPN/UNAM).'
-  author = { name = "Aspirante Ciberseguridad" }
-  disableAuthorWarnings = true # Solución definitiva para Hugo 0.161+
+  disableAuthorWarnings = true
   showSummary = true
   showDate = true
   showReadingTime = true
   showEdit = false
+
+  [params.author]
+    name = "Cesar Eduardo Ceron Martinez"
+    image = "https://github.com/CesarEduardoCeronM.png" # Tu foto de perfil de GitHub
+    links = [
+      { github = "https://github.com/CesarEduardoCeronM" }
+    ]
   
 [menu]
   [[menu.main]]
