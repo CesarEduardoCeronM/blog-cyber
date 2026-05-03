@@ -11,7 +11,7 @@ theme = 'congo'
 
 [params]
   description = 'Bitácora técnica de un ingeniero de software hacia la maestría en ciberseguridad (IPN/UNAM).'
-  author = 'Aspirante Ciberseguridad'
+  author = { name = "Aspirante Ciberseguridad" } # Formato corregido para Hugo 0.161+
   showSummary = true
   showDate = true
   showReadingTime = true
