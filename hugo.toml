@@ -15,6 +15,8 @@ theme = 'congo'
       showDate = true
       showReadingTime = true
       showEdit = false
+      [languages.es.params.header]
+        logo = "terminal" # Icono de terminal para el título
       [languages.es.params.author]
         name = "Cesar Eduardo Ceron Martinez"
         image = "https://github.com/CesarEduardoCeronM.png"
@@ -23,7 +25,6 @@ theme = 'congo'
         ]
 
 [params]
-  # Fallback params
   description = 'Bitácora técnica de un ingeniero de software hacia la maestría en ciberseguridad (IPN/UNAM).'
   author = "Cesar Eduardo Ceron Martinez"
   
