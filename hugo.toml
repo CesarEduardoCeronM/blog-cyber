@@ -1,0 +1,32 @@
+baseURL = 'https://CesarEduardoCeronM.github.io/blog-cyber/'
+locale = 'es'
+title = 'Misión Posgrado: Ciberseguridad'
+theme = 'congo'
+
+[languages]
+  [languages.es]
+    locale = 'es'
+    label = 'Español'
+    contentDir = 'content'
+
+[params]
+  description = 'Bitácora técnica de un ingeniero de software hacia la maestría en ciberseguridad (IPN/UNAM).'
+  author = 'Aspirante Ciberseguridad'
+  showSummary = true
+  showDate = true
+  showReadingTime = true
+  showEdit = false
+  
+[menu]
+  [[menu.main]]
+    name = 'Inicio'
+    url = '/'
+    weight = 10
+  [[menu.main]]
+    name = 'Posts'
+    url = '/posts/'
+    weight = 20
+  [[menu.main]]
+    name = 'Proyectos'
+    url = '/projects/'
+    weight = 30
