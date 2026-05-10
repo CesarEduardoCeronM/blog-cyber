@@ -1,6 +1,6 @@
 ---
 title: "De la Teoría a la Práctica: Mi primer hallazgo crítico con Burp Suite Pro"
-date: 2026-05-10T22:45:00-06:00
+date: 2026-05-10T10:00:00-06:00
 draft: false
 tags: ["ciberseguridad", "burp-suite", "api", "stride", "idor"]
 series: ["Misión Posgrado"]
