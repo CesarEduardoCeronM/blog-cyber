@@ -1,6 +1,6 @@
 baseURL = 'https://CesarEduardoCeronM.github.io/blog-cyber/'
 locale = 'es'
-title = 'Misión Posgrado: Ciberseguridad'
+title = 'Bitácora de Ciberseguridad'
 theme = 'congo'
 
 [languages]
@@ -9,7 +9,7 @@ theme = 'congo'
     label = 'Español'
     contentDir = 'content'
     [languages.es.params]
-      description = 'Bitácora técnica de un ingeniero de software hacia la maestría en ciberseguridad (IPN/UNAM).'
+      description = 'Registro de prácticas técnicas, laboratorios y hallazgos en ciberseguridad.'
       disableAuthorWarnings = true
       showSummary = true
       showDate = true
@@ -25,7 +25,7 @@ theme = 'congo'
         ]
 
 [params]
-  description = 'Bitácora técnica de un ingeniero de software hacia la maestría en ciberseguridad (IPN/UNAM).'
+  description = 'Registro de prácticas técnicas, laboratorios y hallazgos en ciberseguridad.'
   author = "Cesar Eduardo Ceron Martinez"
   
 [menu]

@@ -10,7 +10,7 @@ showTableOfContents: true
 
 ## Introducción: De la teoría a la trinchera
 
-Esta semana enfoqué mis estudios en la **infraestructura de red**. Tras dominar la teoría detrás del Handshake de TCP y la jerarquía de DNS, dediqué mi "Bloque Profundo" dominical a ver cómo estos conceptos se traducen en ataques reales. La conclusión a la que llegué es simple: **la seguridad es tan fuerte como su eslabón más débil**, ya sea un protocolo antiguo o una configuración de servidor web descuidada.
+Esta semana enfoqué mis estudios en la **infraestructura de red**. Tras dominar la teoría detrás del Handshake de TCP y la jerarquía de DNS, dediqué mi práctica dominical a ver cómo estos conceptos se traducen en ataques reales. La conclusión es simple: **la seguridad es tan fuerte como su eslabón más débil**, ya sea un protocolo antiguo o una configuración de servidor web descuidada.
 
 ---
 
@@ -47,6 +47,6 @@ Al forzar la ejecución de la shell desde mi navegador, obtuve acceso remoto. A 
 
 ---
 
-## Conclusión de la Semana 2
+## Conclusión
 
-Esta semana me demostró que la ciberseguridad no se trata solo de conocer herramientas, sino de visualizar el camino que recorren los datos. Ver una contraseña viajar "desnuda" por el aire en Wireshark y luego usar un bypass de lógica pura para entrar a un panel administrativo refuerza mi convicción: el **Modelado de Amenazas (STRIDE)** no es opcional, debe ser el punto de partida de cualquier desarrollo robusto.
+Esta sesión me demostró que la ciberseguridad no se trata solo de conocer herramientas, sino de visualizar el camino que recorren los datos. Ver una contraseña viajar "desnuda" por el aire en Wireshark y luego usar un bypass de lógica pura para entrar a un panel administrativo refuerza mi convicción: el **Modelado de Amenazas (STRIDE)** no es opcional, debe ser el punto de partida de cualquier desarrollo robusto.
